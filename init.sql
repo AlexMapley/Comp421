@@ -2,7 +2,7 @@ CREATE TABLE dogProfiles (
 	did INTEGER NOT NULL,
 	name VARCHAR (100),
 	gender INTEGER,
-	relationship_Status VARCHAR(20) DEFAULT 'single',
+	relationship_Status INTEGER DEFAULT 0,
 	birthdate DATE,
 
 	PRIMARY KEY(did)
