@@ -101,7 +101,7 @@ INSERT INTO ownerProfiles VALUES (20, 'Bea', 'http://facebook/Bea');
 
 --services
 INSERT INTO services VALUES (1, 2, 'Toms Groomers', 'We cut your dogs hair and stuff', '48 London Street, Tokyo');
-INSERT INTO services VALUES (2, 6, 'Abbys Walers', 'We walk your dogs and stuff', '1024 Simon Street, Toronto');
+INSERT INTO services VALUES (2, 6, 'Abbys Walkers', 'We walk your dogs and stuff', '1024 Simon Street, Toronto');
 INSERT INTO services VALUES (3, 8, 'Jerrys Daycare', 'Hey dude! Well look after your dog and stuff', '55 Talkum blvd, Amsterdam');
 INSERT INTO services VALUES (4, 10, 'Michael Seras Posh Dog Academy', 'Well make your dog all proper and stuff', '99 rue du Conejo, Paris');
 INSERT INTO services VALUES (5, 1, 'DogFood Hut', 'We only serve Dog Food and stuff', '199 st. Boulevard, NY');
