@@ -30,7 +30,7 @@ INSERT INTO dogProfiles Values ( 28, 'Aardvark', 1, 1, to_date('2006-12-29', 'YY
 INSERT INTO dogProfiles Values ( 29, 'Monkey', 0, 0, to_date('2013-04-16', 'YYYY-MM-DD'));
 INSERT INTO dogProfiles Values ( 30, 'Alan', 1, 0, to_date('2013-07-04', 'YYYY-MM-DD'));
 
---dogStatuses
+--dogStatuses--
 INSERT INTO dogStatuses Values (4, to_date('2008-03-11', 'YYYY-MM-DD'), 'Lol I hate cats');
 INSERT INTO dogStatuses Values (4, to_date('2016-04-12', 'YYYY-MM-DD'), 'Mailman looks juicy today');
 INSERT INTO dogStatuses Values (2, to_date('2011-06-29', 'YYYY-MM-DD'), 'This is my house, stay away');
