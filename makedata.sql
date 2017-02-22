@@ -16,7 +16,7 @@ INSERT INTO dogProfiles Values ( 14, 'Lianna', 0, 0, to_date('2010-03-14', 'YYYY
 INSERT INTO dogProfiles Values ( 15, 'Mr. Pickles', 1, 1, to_date('2012-11-11', 'YYYY-MM-DD'));
 INSERT INTO dogProfiles Values ( 16, 'Jojo', 0, 1, to_date('2015-12-16', 'YYYY-MM-DD'));
 INSERT INTO dogProfiles Values ( 17, 'Tuggy', 1, 0, to_date('2007-09-07', 'YYYY-MM-DD'));
-INSERT INTO dogProfiles Values ( 18, 'Clementine', 0, 0, '2012-07-16', 'YYYY-MM-DD'));
+INSERT INTO dogProfiles Values ( 18, 'Clementine', 0, 0, to_date('2012-07-16', 'YYYY-MM-DD'));
 INSERT INTO dogProfiles Values ( 19, 'Buddy', 1, 1, to_date('2014-02-29', 'YYYY-MM-DD'));
 INSERT INTO dogProfiles Values ( 20, 'Rosa', 0, 1, to_date('2017-02-16', 'YYYY-MM-DD'));
 INSERT INTO dogProfiles Values ( 21, 'Alex', 0, 1, to_date('2011-03-21', 'YYYY-MM-DD'));
@@ -198,7 +198,7 @@ INSERT INTO DogFriends VALUES(7, 8);
 INSERT INTO DogFriends VALUES(9, 27);
 INSERT INTO DogFriends VALUES(13, 20);
 INSERT INTO DogFriends VALUES(9, 7);
-INSERT INTO DogFriends VALUES(16, 29;
+INSERT INTO DogFriends VALUES(16, 29);
 INSERT INTO DogFriends VALUES(24, 29);
 INSERT INTO DogFriends VALUES(7, 26);
 INSERT INTO DogFriends VALUES(24, 5);
