@@ -69,13 +69,13 @@ INSERT INTO dogClubs VALUES (6, 'Airbud4Life', 'AIRBUDAIRBUDAIERBUD 4 LIIIIIIIII
 INSERT INTO dogClubs VALUES (7, 'Maybe Cat People', 'For the other users who just are not sure if they really are dog people.');
 
 --dogEvents
-INSERT INTO dogClubs VALUES (1, 'Dog Dance Disco Party', '48 London Street, Tokyo', to_date('2012-11-11', 'YYYY-MM-DD'));
-INSERT INTO dogClubs VALUES (2, 'Dogs against Capitalism', '199 st. Boulevard, NY', to_date('2013-02-14', 'YYYY-MM-DD'));
-INSERT INTO dogClubs VALUES (3, 'Led Zeppelin & Their Dogs', '55 Talkum blvd, Amsterdam', to_date('2009-01-29', 'YYYY-MM-DD'));
-INSERT INTO dogClubs VALUES (4, 'Yoga, for Dogs!', '1024 Simon Street, Toronto', to_date('2007-11-31', 'YYYY-MM-DD'));
-INSERT INTO dogClubs VALUES (5, 'Hot Dogs and Dogs', '96 Pacer Road, Santiago', to_date('2006-12-25', 'YYYY-MM-DD'));
-INSERT INTO dogClubs VALUES (6, 'Anti-Cat Rally', '99 rue du Conejo, Paris', to_date('2005-05-25', 'YYYY-MM-DD'));
-INSERT INTO dogClubs VALUES (7, 'DogaPalooza! It is wild up in here!', '2056 Hendrix drive, Seattle', to_date('2004-03-03', 'YYYY-MM-DD'));
+INSERT INTO dogEvents VALUES (1, 'Dog Dance Disco Party', '48 London Street, Tokyo', to_date('2012-11-11', 'YYYY-MM-DD'));
+INSERT INTO dogEvents VALUES (2, 'Dogs against Capitalism', '199 st. Boulevard, NY', to_date('2013-02-14', 'YYYY-MM-DD'));
+INSERT INTO dogEvents VALUES (3, 'Led Zeppelin & Their Dogs', '55 Talkum blvd, Amsterdam', to_date('2009-01-29', 'YYYY-MM-DD'));
+INSERT INTO dogEvents VALUES (4, 'Yoga, for Dogs!', '1024 Simon Street, Toronto', to_date('2007-11-31', 'YYYY-MM-DD'));
+INSERT INTO dogEvents VALUES (5, 'Hot Dogs and Dogs', '96 Pacer Road, Santiago', to_date('2006-12-25', 'YYYY-MM-DD'));
+INSERT INTO dogEvents VALUES (6, 'Anti-Cat Rally', '99 rue du Conejo, Paris', to_date('2005-05-25', 'YYYY-MM-DD'));
+INSERT INTO dogEvents VALUES (7, 'DogaPalooza! It is wild up in here!', '2056 Hendrix drive, Seattle', to_date('2004-03-03', 'YYYY-MM-DD'));
 
 --ownerProfiles
 INSERT INTO ownerProfiles VALUES (1, 'Hank', 'http://facebook/Hank');
