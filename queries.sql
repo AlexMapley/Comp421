@@ -3,7 +3,7 @@
 -- they all actually work.
 
 -- 1) Lists all single dogs in descending order by birthdate
-select name, age(birthdate)
+select name, gender, age(birthdate)
 from dogprofiles
 where name in (
         select name
@@ -29,12 +29,17 @@ where did in (
 );
 
 
---3) Joins Owner and Dog Profiles on shared ID
---select *
---from dogprofiles
---inner join ownerprofiles
---on (dogprofiles.did = ownerprofiles.opid)
---;
+--3) Selects all Female Dogs in the 'Followers of Lassie' Club
+-- Listing Names in alphabetical order with Ids
+select dogprofiles.did, dogprofiles.name, dogclubs.name
+from dogprofiles, dogclubs
+where dogprofiles.gender = 0 and dogprofiles.did in (
+        select dogid
+        from membersofclubs
+        where clubid = 5
+)
+order by dogprofiles.name ASC
+;
 
 --4) Cross Product of  Clubs, Retailers, and Services
 --select dogclubs.name, retailers.name, services.name
@@ -42,10 +47,11 @@ where did in (
 --;
 
 --5) Lists all services and retailers
---select *
+--select services.name, retailer.name
 --from services
 --UNION
 --select *
 --from retailers
 --; 
+
 
