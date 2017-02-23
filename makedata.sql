@@ -105,6 +105,7 @@ INSERT INTO services VALUES (2, 6, 'Abbys Walkers', 'We walk your dogs and stuff
 INSERT INTO services VALUES (3, 8, 'Jerrys Daycare', 'Hey dude! Well look after your dog and stuff', '55 Talkum blvd, Amsterdam');
 INSERT INTO services VALUES (4, 10, 'Michael Seras Posh Dog Academy', 'Well make your dog all proper and stuff', '99 rue du Conejo, Paris');
 INSERT INTO services VALUES (5, 1, 'DogFood Hut', 'We only serve Dog Food and stuff', '199 st. Boulevard, NY');
+INSERT INTO services VALUES (6, 7, 'Liannas Dog Grooming Extravaganza', 'No one cuts hair like we do. No one. NOONE! AHAHAHA!', '49 London Street, Tokyo');
 
 INSERT INTO retailers VAlUES (1, 'Dog Planet', '2056 Hendrix drive, Seattle', 'We have everything for dogs, everything you could ever want...', 'http://dogplanet.com');
 INSERT INTO retailers VAlUES (2, 'Doggy Swagz', NULL, 'We got all the swag for Dogs and their owners', 'http://dogswaGGGG.com');
