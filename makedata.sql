@@ -67,6 +67,7 @@ INSERT INTO dogClubs VALUES (4, 'Top Dogs', 'You mess with us, and you will be b
 INSERT INTO dogClubs VALUES (5, 'Followers of Lassie', 'All hail the Magic Collie!');
 INSERT INTO dogClubs VALUES (6, 'Airbud4Life', 'AIRBUDAIRBUDAIERBUD 4 LIIIIIIIIIIIIIFFFFFFFFFEEEEEEEEE');
 INSERT INTO dogClubs VALUES (7, 'Maybe Cat People', 'For the other users who just are not sure if they really are dog people.');
+INSERT INTO dogClubs VALUES (8, 'Multi-dog Homes', 'For owners who have multiple dogs.');
 
 --dogEvents
 INSERT INTO dogEvents VALUES (1, 'Dog Dance Disco Party', '48 London Street, Tokyo', to_date('2012-11-11', 'YYYY-MM-DD'));
