@@ -46,12 +46,17 @@ order by dogprofiles.name ASC
 --from dogclubs, retailers, services
 --;
 
---5) Lists all services and retailers
---select services.name, retailer.name
---from services
---UNION
---select *
---from retailers
---; 
-
+--5) Lists all Owners that are admins of a club, event, retailer, or service
+select *
+from ownerprofiles
+where opid in (
+        select adminid from clubadmins
+) or opid in (
+        select adminid from eventadmins
+) or opid in (
+        select ownerid from serviceadmins
+) or opid in (
+        select ownerid from retailadmins
+)
+;
 
