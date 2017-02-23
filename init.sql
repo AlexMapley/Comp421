@@ -49,8 +49,8 @@ CREATE TABLE dogEvents (
 
 CREATE TABLE ownerProfiles (
 	opid INTEGER NOT NULL,
-	facebook_Link VARCHAR (200) NOT NULL,
 	name VARCHAR (100) NOT NULL,
+	facebook_Link VARCHAR (200) NOT NULL,
 
 	PRIMARY KEY(opid)
 );
