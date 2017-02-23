@@ -41,6 +41,7 @@ CREATE TABLE dogEvents (
 	eid INTEGER NOT NULL,
 	name VARCHAR (100) NOT NULL,
 	location VARCHAR (200),
+	description VARCHAR (1000),
 	event_date DATE NOT NULL,
 
 	PRIMARY KEY(eid)
@@ -49,8 +50,8 @@ CREATE TABLE dogEvents (
 
 CREATE TABLE ownerProfiles (
 	opid INTEGER NOT NULL,
-	facebook_Link VARCHAR (200) NOT NULL,
 	name VARCHAR (100) NOT NULL,
+	facebook_Link VARCHAR (200) NOT NULL,
 
 	PRIMARY KEY(opid)
 );
