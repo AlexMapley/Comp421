@@ -78,6 +78,40 @@ INSERT INTO dogEvents VALUES (5, 'Hot Dogs and Dogs', '96 Pacer Road, Santiago',
 INSERT INTO dogEvents VALUES (6, 'Anti-Cat Rally', '99 rue du Conejo, Paris', to_date('2005-05-25', 'YYYY-MM-DD'));
 INSERT INTO dogEvents VALUES (7, 'DogaPalooza! It is wild up in here!', '2056 Hendrix drive, Seattle', to_date('2004-03-03', 'YYYY-MM-DD'));
 
+
+--Event Admins
+INSERT INTO eventAdmins VALUES (4,2);
+INSERT INTO eventAdmins VALUES (5,3);
+INSERT INTO eventAdmins VALUES (8,7);
+INSERT INTO eventAdmins VALUES (9,6);
+INSERT INTO eventAdmins VALUES (16,2);
+INSERT INTO eventAdmins VALUES (3,6);
+INSERT INTO eventAdmins VALUES (2,4);
+INSERT INTO eventAdmins VALUES (1,5);
+INSERT INTO eventAdmins VALUES (1,1);
+
+
+--Retail admins
+INSERT INTO retailAdmins VALUES (1,1);
+INSERT INTO retailAdmins VALUES (1,2);
+INSERT INTO retailAdmins VALUES (5,3);
+INSERT INTO retailAdmins VALUES (4,4);
+INSERT INTO retailAdmins VALUES (3,5);
+INSERT INTO retailAdmins VALUES (2,6);
+INSERT INTO retailAdmins VALUES (13,5);
+INSERT INTO retailAdmins VALUES (11,1);
+
+--Service admins
+INSERT INTO serviceAdmins VALUES (9,1);
+INSERT INTO serviceAdmins VALUES (12,2);
+INSERT INTO serviceAdmins VALUES (3,3);
+INSERT INTO serviceAdmins VALUES (8,4);
+INSERT INTO serviceAdmins VALUES (9,6);
+INSERT INTO serviceAdmins VALUES (5,5);
+INSERT INTO serviceAdmins VALUES (2,4);
+INSERT INTO serviceAdmins VALUES (11,3);
+
+
 --ownerProfiles
 INSERT INTO ownerProfiles VALUES (1, 'Hank', 'http://facebook/Hank');
 INSERT INTO ownerProfiles VALUES (2, 'Jess', 'http://facebook/Jess');
