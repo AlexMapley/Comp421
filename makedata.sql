@@ -101,38 +101,6 @@ INSERT INTO ownerProfiles VALUES (19, 'Anika', 'http://facebook/Anika');
 INSERT INTO ownerProfiles VALUES (20, 'Bea', 'http://facebook/Bea');
 
 
---Event Admins
-INSERT INTO eventAdmins VALUES (4,2);
-INSERT INTO eventAdmins VALUES (5,3);
-INSERT INTO eventAdmins VALUES (8,7);
-INSERT INTO eventAdmins VALUES (9,6);
-INSERT INTO eventAdmins VALUES (16,2);
-INSERT INTO eventAdmins VALUES (3,6);
-INSERT INTO eventAdmins VALUES (2,4);
-INSERT INTO eventAdmins VALUES (1,5);
-INSERT INTO eventAdmins VALUES (1,1);
-
-
---Retail admins
-INSERT INTO retailAdmins VALUES (1,1);
-INSERT INTO retailAdmins VALUES (1,2);
-INSERT INTO retailAdmins VALUES (5,3);
-INSERT INTO retailAdmins VALUES (4,4);
-INSERT INTO retailAdmins VALUES (3,5);
-INSERT INTO retailAdmins VALUES (2,6);
-INSERT INTO retailAdmins VALUES (13,5);
-INSERT INTO retailAdmins VALUES (11,1);
-
---Service admins
-INSERT INTO serviceAdmins VALUES (9,1);
-INSERT INTO serviceAdmins VALUES (12,2);
-INSERT INTO serviceAdmins VALUES (3,3);
-INSERT INTO serviceAdmins VALUES (8,4);
-INSERT INTO serviceAdmins VALUES (9,6);
-INSERT INTO serviceAdmins VALUES (5,5);
-INSERT INTO serviceAdmins VALUES (2,4);
-INSERT INTO serviceAdmins VALUES (11,3);
-
 
 --services
 INSERT INTO services VALUES (1, 2, 'Toms Groomers', 'We cut your dogs hair and stuff (Groomer)', '48 London Street, Tokyo');
@@ -2462,3 +2430,39 @@ INSERT INTO ownerReservesServices VALUES(4,3);
 INSERT INTO ownerReservesServices VALUES(9,5);
 INSERT INTO ownerReservesServices VALUES(5,2);
 INSERT INTO ownerReservesServices VALUES(10,2);
+
+
+
+
+--Event Admins
+INSERT INTO eventAdmins VALUES (4,2);
+INSERT INTO eventAdmins VALUES (5,3);
+INSERT INTO eventAdmins VALUES (8,7);
+INSERT INTO eventAdmins VALUES (9,6);
+INSERT INTO eventAdmins VALUES (16,2);
+INSERT INTO eventAdmins VALUES (3,6);
+INSERT INTO eventAdmins VALUES (2,4);
+INSERT INTO eventAdmins VALUES (1,5);
+INSERT INTO eventAdmins VALUES (1,1);
+
+
+--Retail admins
+INSERT INTO retailAdmins VALUES (1,1);
+INSERT INTO retailAdmins VALUES (1,2);
+INSERT INTO retailAdmins VALUES (5,3);
+INSERT INTO retailAdmins VALUES (4,4);
+INSERT INTO retailAdmins VALUES (3,5);
+INSERT INTO retailAdmins VALUES (2,6);
+INSERT INTO retailAdmins VALUES (13,5);
+INSERT INTO retailAdmins VALUES (11,1);
+
+--Service admins
+INSERT INTO serviceAdmins VALUES (9,1);
+INSERT INTO serviceAdmins VALUES (12,2);
+INSERT INTO serviceAdmins VALUES (3,3);
+INSERT INTO serviceAdmins VALUES (8,4);
+INSERT INTO serviceAdmins VALUES (9,6);
+INSERT INTO serviceAdmins VALUES (5,5);
+INSERT INTO serviceAdmins VALUES (2,4);
+INSERT INTO serviceAdmins VALUES (11,3);
+
