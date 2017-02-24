@@ -101,17 +101,17 @@ INSERT INTO ownerProfiles VALUES (19, 'Anika', 'http://facebook/Anika');
 INSERT INTO ownerProfiles VALUES (20, 'Bea', 'http://facebook/Bea');
 
 --services
-INSERT INTO services VALUES (1, 2, 'Toms Groomers', 'We cut your dogs hair and stuff', '48 London Street, Tokyo');
-INSERT INTO services VALUES (2, 6, 'Abbys Walkers', 'We walk your dogs and stuff', '1024 Simon Street, Toronto');
-INSERT INTO services VALUES (3, 8, 'Jerrys Daycare', 'Hey dude! Well look after your dog and stuff', '55 Talkum blvd, Amsterdam');
-INSERT INTO services VALUES (4, 10, 'Michael Seras Posh Dog Academy', 'Well make your dog all proper and stuff', '99 rue du Conejo, Paris');
-INSERT INTO services VALUES (5, 1, 'DogFood Hut', 'We only serve Dog Food and stuff', '199 st. Boulevard, NY');
-INSERT INTO services VALUES (6, 7, 'Liannas Dog Grooming Extravaganza', 'No one cuts (dog) hair like we do. No one. NO ONE.', '49 London Street, Tokyo');
-INSERT INTO retailers VAlUES (1, 'Dog Planet', '2056 Hendrix drive, Seattle', 'We have everything for dogs, everything you could ever want...', 'http://dogplanet.com');
-INSERT INTO retailers VAlUES (2, 'Doggy Swagz', NULL, 'We got all the swag for Dogs and their owners', 'http://dogswaGGGG.com');
-INSERT INTO retailers VAlUES (3, 'Dog Capes Inc.', '1028 Melvin avenue, Wisconsin', 'We have capes in all sizes, except larger and small', 'http://dogcapes.gov');
-INSERT INTO retailers VAlUES (4, 'Lulz and Dog Memes',  NULL,  'We make memes of your dog, and then sell them to you', 'http://doglulzdemes.org');
-INSERT INTO retailers VAlUES (5, 'Dog Vacation Packages',  NULL, 'Want to get away, but not from your dog? Book one our trips now!', 'http://dogGetAways.com');
+INSERT INTO services VALUES (1, 2, 'Toms Groomers', 'We cut your dogs hair and stuff (Groomer)', '48 London Street, Tokyo');
+INSERT INTO services VALUES (2, 6, 'Abbys Walkers', 'We walk your dogs and stuff(Dog-walking)', '1024 Simon Street, Tokyo');
+INSERT INTO services VALUES (3, 8, 'Jerrys Daycare', 'Hey dude! Well look after your dog and stuff(Dog-Watching)', '55 Talkum blvd, Amsterdam');
+INSERT INTO services VALUES (4, 10, 'Michael Seras Posh Dog Academy', 'Well make your dog all proper and stuff (Groomer)', '99 rue du Conejo, Paris');
+INSERT INTO services VALUES (5, 1, 'DogFood Hut', 'We only serve Dog Food and stuff (Dog-Food)', '199 st. Boulevard, NY');
+INSERT INTO services VALUES (6, 7, 'Liannas Dog Grooming Extravaganza', 'No one cuts (dog) hair like we do. No one. NO ONE.(Groomer)', '49 London Street, Tokyo');
+INSERT INTO retailers VAlUES (1, 'Dog Planet', '2056 Hendrix drive, Seattle', 'We have everything for dogs, everything you could ever want...(Dog-Goods)', 'http://dogplanet.com');
+INSERT INTO retailers VAlUES (2, 'Doggy Swagz', NULL, 'We got all the swag for Dogs and their owners (Dog-Goods)', 'http://dogswaGGGG.com');
+INSERT INTO retailers VAlUES (3, 'Dog Capes Inc.', '1028 Melvin avenue, Wisconsin', 'We have capes in all sizes, except larger and small (Dog-Goods)', 'http://dogcapes.gov');
+INSERT INTO retailers VAlUES (4, 'Lulz and Dog Memes',  NULL,  'We make memes of your dog, and then sell them to you (Dog-Goods)', 'http://doglulzdemes.org');
+INSERT INTO retailers VAlUES (5, 'Dog Vacation Packages',  NULL, 'Want to get away, but not from your dog? Book one our trips now!(Dog-Vacation)', 'http://dogGetAways.com');
 
 --DogFriends
 INSERT INTO DogFriends VALUES(2, 27);
