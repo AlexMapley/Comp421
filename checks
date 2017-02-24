@@ -1,6 +1,7 @@
 alter table services
 ADD constraint minimumWage check (rate > 0);
 
+INSERT INTO services VALUES (8, 0, 'Fake Service', 'We do nothing', 'Middle of Nowhere');
 
 
 alter table dogprofiles
