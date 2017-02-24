@@ -21,5 +21,3 @@ DROP TABLE ownerProfiles;
 DROP TABLE retailers;
 DROP TABLE services;
 DROP TABLE dogProfiles;
-
-
