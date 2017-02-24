@@ -31,21 +31,21 @@ INSERT INTO dogProfiles Values ( 29, 'Monkey', 0, 0, to_date('2013-04-16', 'YYYY
 INSERT INTO dogProfiles Values ( 30, 'Alan', 1, 0, to_date('2013-07-04', 'YYYY-MM-DD'));
 
 --dogStatuses--
-INSERT INTO dogStatuses Values (4, to_date('2017-02-11', 'YYYY-MM-DD'), 'Lol I hate cats');
-INSERT INTO dogStatuses Values (4, to_date('2016-04-12', 'YYYY-MM-DD'), 'Mailman looks juicy today');
-INSERT INTO dogStatuses Values (2, to_date('2011-06-29', 'YYYY-MM-DD'), 'This is my house, stay away');
-INSERT INTO dogStatuses Values (16, to_date('2017-02-22', 'YYYY-MM-DD'), 'Single and ready to mingle!');
-INSERT INTO dogStatuses Values (17, to_date('2009-09-17', 'YYYY-MM-DD'), 'Where is Waldo anyways?');
-INSERT INTO dogStatuses Values (5, to_date('2012-12-03', 'YYYY-MM-DD'), 'Are our lives determined, or do we just live in an empty vacuum of chaos?');
-INSERT INTO dogStatuses Values (6, to_date('2017-01-25', 'YYYY-MM-DD'), 'Lol cats are the worst');
-INSERT INTO dogStatuses Values (3, to_date('2010-06-16', 'YYYY-MM-DD'), 'New parakeet is hidden in cage, will find key soon');
-INSERT INTO dogStatuses Values (1, to_date('2006-05-19', 'YYYY-MM-DD'), 'I love bananas! So much! So much pottassium too! Lmao!');
-INSERT INTO dogStatuses Values (9, to_date('1999-02-21', 'YYYY-MM-DD'), 'Life is pain, and I am Bane, from Batman');
+INSERT INTO dogStatuses Values (1, to_date('2017-02-11', 'YYYY-MM-DD'), 'Lol I hate cats');
+INSERT INTO dogStatuses Values (2, to_date('2016-04-12', 'YYYY-MM-DD'), 'Mailman looks juicy today');
+INSERT INTO dogStatuses Values (3, to_date('2011-06-29', 'YYYY-MM-DD'), 'This is my house, stay away');
+INSERT INTO dogStatuses Values (4, to_date('2017-02-22', 'YYYY-MM-DD'), 'Single and ready to mingle!');
+INSERT INTO dogStatuses Values (5, to_date('2009-09-17', 'YYYY-MM-DD'), 'Where is Waldo anyways?');
+INSERT INTO dogStatuses Values (6, to_date('2012-12-03', 'YYYY-MM-DD'), 'Are our lives determined, or do we just live in an empty vacuum of chaos?');
+INSERT INTO dogStatuses Values (7, to_date('2017-01-25', 'YYYY-MM-DD'), 'Lol cats are the worst');
+INSERT INTO dogStatuses Values (8, to_date('2010-06-16', 'YYYY-MM-DD'), 'New parakeet is hidden in cage, will find key soon');
+INSERT INTO dogStatuses Values (9, to_date('2006-05-19', 'YYYY-MM-DD'), 'I love bananas! So much! So much pottassium too! Lmao!');
+INSERT INTO dogStatuses Values (10, to_date('1999-02-21', 'YYYY-MM-DD'), 'Life is pain, and I am Bane, from Batman');
 INSERT INTO dogStatuses Values (11, to_date('2014-01-28', 'YYYY-MM-DD'), 'Sos, need can opener.');
-INSERT INTO dogStatuses Values (4, to_date('2013-02-27', 'YYYY-MM-DD'), 'Dog food? Who says it has to be for dogs?');
-INSERT INTO dogStatuses Values (12, to_date('2017-02-01', 'YYYY-MM-DD'), 'Roflcopter I played with the hose today, lololololol');
-INSERT INTO dogStatuses Values (13, to_date('2012-11-31', 'YYYY-MM-DD'), 'I am the Lizard King!');
-INSERT INTO dogStatuses Values (16, to_date('2011-10-30', 'YYYY-MM-DD'), 'Helicopters are both dangerous and cool');
+INSERT INTO dogStatuses Values (12, to_date('2013-02-27', 'YYYY-MM-DD'), 'Dog food? Who says it has to be for dogs?');
+INSERT INTO dogStatuses Values (13, to_date('2017-02-01', 'YYYY-MM-DD'), 'Roflcopter I played with the hose today, lololololol');
+INSERT INTO dogStatuses Values (14, to_date('2012-11-31', 'YYYY-MM-DD'), 'I am the Lizard King!');
+INSERT INTO dogStatuses Values (15, to_date('2011-10-30', 'YYYY-MM-DD'), 'Helicopters are both dangerous and cool');
 
 --dogPictures
 INSERT INTO dogPictures VALUES (1, to_date('2008-04-22', 'YYYY-MM-DD'));
