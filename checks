@@ -6,3 +6,5 @@ INSERT INTO services VALUES (8, 0, 'Fake Service', 'We do nothing', 'Middle of N
 
 alter table dogprofiles
 ADD constraint minimumAge check (birthdate >= '1980-01-01');
+
+INSERT INTO services VALUES (31, "FakeDog", 0, 0, '1979-12-31'
