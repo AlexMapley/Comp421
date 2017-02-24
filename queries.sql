@@ -42,10 +42,19 @@ and dogprofiles.did in (
 order by dogprofiles.name ASC
 ;
 
---4) Cross Product of  Clubs, Retailers, and Services
---select dogclubs.name, retailers.name, services.name
---from dogclubs, retailers, services
---;
+--4) Finds all friends of Spike's (1) Family who are friends
+-- with Jojo (16), his girlfriend
+select dogProfiles.did, dogProfiles.name
+from dogProfiles
+where dogProfiles.did in (
+        select dog2 from familyMembers 
+        where dog1 = 1
+        )
+and  dogprofiles.did in (
+        select dog1 from dogFriends
+        where dog2 = 16
+        )
+;
 
 --5) Lists all Owners that are admins of a club, event, retailer, or service
 select *
