@@ -3,7 +3,6 @@ DROP TABLE familyMembers;
 DROP TABLE relationships;
 DROP TABLE uploadsPhoto;
 DROP TABLE tagsPhoto;  
-DROP TABLE makesStatus; 
 DROP TABLE membersOfClubs; 
 DROP TABLE clubAdmins; 
 DROP TABLE goingToEvent; 
@@ -243,20 +242,6 @@ CREATE TABLE serviceAdmins (
 	FOREIGN KEY(ownerId) REFERENCES ownerProfiles(opid),
 	FOREIGN KEY(serviceId) REFERENCES services(sid)
 );
-
-
---How can we do this??????
-CREATE TABLE makesStatus (
-	did INTEGER,
-	upload_Time DATE NOT NULL,
-	
-	PRIMARY KEY (did, upload_Time),
-
-	FOREIGN KEY (did, upload_Time) REFERENCES dogStatuses(did, upload_Time),
-
-	FOREIGN KEY(did) REFERENCES dogProfiles(did)
-);
-
 
 
 
