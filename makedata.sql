@@ -78,6 +78,28 @@ INSERT INTO dogEvents VALUES (5, 'Hot Dogs and Dogs', '96 Pacer Road, Santiago',
 INSERT INTO dogEvents VALUES (6, 'Anti-Cat Rally', '99 rue du Conejo, Paris', to_date('2005-05-25', 'YYYY-MM-DD'));
 INSERT INTO dogEvents VALUES (7, 'DogaPalooza! It is wild up in here!', '2056 Hendrix drive, Seattle', to_date('2004-03-03', 'YYYY-MM-DD'));
 
+--ownerProfiles
+INSERT INTO ownerProfiles VALUES (1, 'Hank', 'http://facebook/Hank');
+INSERT INTO ownerProfiles VALUES (2, 'Jess', 'http://facebook/Jess');
+INSERT INTO ownerProfiles VALUES (3, 'Tim', 'http://facebook/Tim');
+INSERT INTO ownerProfiles VALUES (4, 'Monica', 'http://facebook/Monica');
+INSERT INTO ownerProfiles VALUES (5, 'Clayton', 'http://facebook/Clayton');
+INSERT INTO ownerProfiles VALUES (6, 'Thomas', 'http://facebook/Thomas');
+INSERT INTO ownerProfiles VALUES (7, 'Vanessa', 'http://facebook/Vanessa');
+INSERT INTO ownerProfiles VALUES (8, 'Andrea', 'http://facebook/Andrea');
+INSERT INTO ownerProfiles VALUES (9, 'Alice', 'http://facebook/Alice');
+INSERT INTO ownerProfiles VALUES (10, 'Carl', 'http://facebook/Carl');
+INSERT INTO ownerProfiles VALUES (11, 'Carlston', 'http://facebook/Carlston');
+INSERT INTO ownerProfiles VALUES (12, 'Henry', 'http://facebook/Henry');
+INSERT INTO ownerProfiles VALUES (13, 'Julia', 'http://facebook/Julia');
+INSERT INTO ownerProfiles VALUES (14, 'Ann', 'http://facebook/Ann');
+INSERT INTO ownerProfiles VALUES (15, 'Urooj', 'http://facebook/Urooj');
+INSERT INTO ownerProfiles VALUES (16, 'Martin', 'http://facebook/Martin');
+INSERT INTO ownerProfiles VALUES (17, 'Jonah', 'http://facebook/Jonah');
+INSERT INTO ownerProfiles VALUES (18, 'Hannah', 'http://facebook/Hannah');
+INSERT INTO ownerProfiles VALUES (19, 'Anika', 'http://facebook/Anika');
+INSERT INTO ownerProfiles VALUES (20, 'Bea', 'http://facebook/Bea');
+
 
 --Event Admins
 INSERT INTO eventAdmins VALUES (4,2);
@@ -111,28 +133,6 @@ INSERT INTO serviceAdmins VALUES (5,5);
 INSERT INTO serviceAdmins VALUES (2,4);
 INSERT INTO serviceAdmins VALUES (11,3);
 
-
---ownerProfiles
-INSERT INTO ownerProfiles VALUES (1, 'Hank', 'http://facebook/Hank');
-INSERT INTO ownerProfiles VALUES (2, 'Jess', 'http://facebook/Jess');
-INSERT INTO ownerProfiles VALUES (3, 'Tim', 'http://facebook/Tim');
-INSERT INTO ownerProfiles VALUES (4, 'Monica', 'http://facebook/Monica');
-INSERT INTO ownerProfiles VALUES (5, 'Clayton', 'http://facebook/Clayton');
-INSERT INTO ownerProfiles VALUES (6, 'Thomas', 'http://facebook/Thomas');
-INSERT INTO ownerProfiles VALUES (7, 'Vanessa', 'http://facebook/Vanessa');
-INSERT INTO ownerProfiles VALUES (8, 'Andrea', 'http://facebook/Andrea');
-INSERT INTO ownerProfiles VALUES (9, 'Alice', 'http://facebook/Alice');
-INSERT INTO ownerProfiles VALUES (10, 'Carl', 'http://facebook/Carl');
-INSERT INTO ownerProfiles VALUES (11, 'Carlston', 'http://facebook/Carlston');
-INSERT INTO ownerProfiles VALUES (12, 'Henry', 'http://facebook/Henry');
-INSERT INTO ownerProfiles VALUES (13, 'Julia', 'http://facebook/Julia');
-INSERT INTO ownerProfiles VALUES (14, 'Ann', 'http://facebook/Ann');
-INSERT INTO ownerProfiles VALUES (15, 'Urooj', 'http://facebook/Urooj');
-INSERT INTO ownerProfiles VALUES (16, 'Martin', 'http://facebook/Martin');
-INSERT INTO ownerProfiles VALUES (17, 'Jonah', 'http://facebook/Jonah');
-INSERT INTO ownerProfiles VALUES (18, 'Hannah', 'http://facebook/Hannah');
-INSERT INTO ownerProfiles VALUES (19, 'Anika', 'http://facebook/Anika');
-INSERT INTO ownerProfiles VALUES (20, 'Bea', 'http://facebook/Bea');
 
 --services
 INSERT INTO services VALUES (1, 2, 'Toms Groomers', 'We cut your dogs hair and stuff (Groomer)', '48 London Street, Tokyo');
