@@ -33,10 +33,11 @@ where did in (
 -- Listing Names in alphabetical order with Ids
 select dogprofiles.did, dogprofiles.name, dogclubs.name
 from dogprofiles, dogclubs
-where dogprofiles.gender = 0 and dogprofiles.did in (
+where dogprofiles.gender = 0 
+and dogclubs.cid = 5
+and dogprofiles.did in (
         select dogid
         from membersofclubs
-        where clubid = 5
 )
 order by dogprofiles.name ASC
 ;
