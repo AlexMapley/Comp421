@@ -1,0 +1,7 @@
+alter table services
+ADD constraint minimumWage check (rate > 0);
+
+
+
+alter table dogprofiles
+ADD constraint minimumAge check (birthdate >= '1980-01-01');
