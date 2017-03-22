@@ -12,9 +12,10 @@ public class Driver {
 	static int sqlCode = 0;
 	static String sqlState = "00000";
 	static String query;
+	static String insertSQL;
 	
 	//User Selected Variables
-	static Dog selectedDoge;
+	static Dog selectedDoge = new Dog(0, "noName", 0, 0, "null");
 	static Dog otherDoge;
 	static int xdid;
 	static String xname;
@@ -70,7 +71,7 @@ public class Driver {
 			
 			
 			//Profile info
-			System.out.println("Currently Accessing as " + selectedDoge + "\n\n");
+			System.out.println("Currently Accessing as " + selectedDoge.getName() + "\n\n");
 			
 			
 			/* Response Cases:
@@ -98,6 +99,9 @@ public class Driver {
 			if (userInput.equals("1")) {
 				System.out.println("Press 1 to view dogs,\n2 to view Clubs,\n"
 						+ "3 to view Events,\n4 to view Services,\nAnd 5 to view Retailers");
+				System.out.println("Please Note:\nFor the sake of thsi demo, we are allowing" +
+						" alot more transparency in information. Normally you couldn't just find" +
+						" info on dogs you're not friends with, clubs you're not a part of, ect.");
 				int listChoice = userReader.nextInt();
 				
 				//1. View all dogs
@@ -113,8 +117,7 @@ public class Driver {
 						if (gender == 1) {
 							gend = "Female";
 						}
-						String birthdate = rs.getString(5);
-						System.out.println("(did: " + did + ") " + name + ", " + gend + " gender, born " + birthdate);
+						System.out.println("(did: " + did + ") " + name + ", " + gend + " gender");
 					 }
 					 System.out.println("-----------------------------------------------");
 				}
@@ -249,11 +252,71 @@ public class Driver {
 
 			/* 3. Viewing another Dog */
 			else if (userInput.equals("3")) {
+				
+				//Header
+				System.out.println("\nJust a quick reminder of the Dogs out there:");
+				System.out.println("\n-----------------------------------------------");
+				query = "select * from dogprofiles";
+				java.sql.ResultSet rs = statement.executeQuery ( query ) ;
+				while ( rs.next ( ) ) {
+					int did = rs.getInt (1) ;
+					String name = rs.getString (2);
+					System.out.println("(did: " + did + ") " + name);
+				 }
+				System.out.println("-----------------------------------------------");
 				System.out.println("\nSelect a profile, by id");
+				
+				//1. Are they a real profile?
 				int selectionId = userReader.nextInt();
-				System.out.println("\nPrinting Info from" + otherDoge +" of id " + selectionId);
+				int real = 0;
+				query = ("select * from dogprofiles where did = " + selectionId);
+				java.sql.ResultSet realFinder = statement.executeQuery ( query ) ;
+			    while ( realFinder.next ( ) ) {
+			    	real = realFinder.getInt(1);
+			    }
+			    if (real == 0) {
+			    	System.out.println("\n\nINVALID PROFILE, choose a real Id");
+			    }
+			    
+			    else {
+			    	//2. Are we friends?
+			    	int areFriends = 0;
+			    	query = ("select * from dogfriends where dog1 = " + selectedDoge.getDid()
+			    	+ "and dog2 = " + selectionId);
+			    	java.sql.ResultSet friendFinder = statement.executeQuery ( query ) ;
+			    	while ( friendFinder.next ( ) ) {
+			    		areFriends = friendFinder.getInt(1);
+			    	}
+			    	
+			    	if (areFriends != 0) {
+			    		//3.1 Friends!
+			    		query= ("select * from dogprofiles where did = "+ selectionId);
+						java.sql.ResultSet lookup = statement.executeQuery ( query ) ;
+						while ( lookup.next ( ) ) {
+						    xdid = lookup.getInt(1);
+						    xname = lookup.getString(2);
+						    xgender = lookup.getInt(3);
+						    xrStatus = lookup.getInt(4);
+						    xbDay = lookup.getString(5);
+						}
+						otherDoge = new Dog(xdid,xname,xgender,xrStatus,xbDay);
+						System.out.println("\n\nYou are friends!\n");
+						otherDoge.print();
+						 
+			    	}
+			    	else { 
+			    		//3.2 Not friends
+			    		query= ("select did, name from dogprofiles where did = "+ selectionId);
+			    		java.sql.ResultSet lookup = statement.executeQuery ( query ) ;
+						while ( lookup.next ( ) ) {
+						    xdid = lookup.getInt(1);
+						    xname = lookup.getString(2);
+						}
+						System.out.println("\n\nYou aren't friends, limited info available\n");
+						System.out.println("Did: " + xdid +", Name: " + xname);
+			    	}
+			    }
 			}
-			
 			
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -261,14 +324,95 @@ public class Driver {
 			else if (userInput.equals("4")) {
 				System.out.println("\nSelect a dog, by id");
 				int selectionId = userReader.nextInt();
-				System.out.println("Sending friend request to " + otherDoge +"of id "+ selectionId);
+				
+				//1. Are they a real profile?
+				int real = 0;
+				query = ("select * from dogprofiles where did = " + selectionId);
+				java.sql.ResultSet realFinder = statement.executeQuery ( query ) ;
+			    while ( realFinder.next ( ) ) {
+			    	real = realFinder.getInt(1);
+			    }
+			    if (real == 0) {
+			    	System.out.println("\n\nINVALID PROFILE, choose a real Id");
+			    }
+			    
+			    else {
+			    	//2. Are we already friends?
+			    	int areFriends = 0;
+			    	query = ("select * from dogfriends where dog1 = " + selectedDoge.getDid()
+			    	+ "and dog2 = " + selectionId);
+			    	java.sql.ResultSet friendFinder = statement.executeQuery ( query ) ;
+			    	while ( friendFinder.next ( ) ) {
+			    		areFriends = friendFinder.getInt(1);
+			    	}
+			    	
+			    	if (areFriends != 0) {
+			    		//3 Friends!
+			    		System.out.println("\n\nYou guys are already friends, don't harass them!");
+						 
+			    	}
+			    	else { 
+			    		//4 Not friends, yet
+			    		int requestSent = 0;
+			    		query = ("select * from friendRequests where dog1 = " + selectedDoge.getDid()
+				    	+ "and dog2 = " + selectionId);
+				    	java.sql.ResultSet requestVerifier = statement.executeQuery ( query ) ;
+				    	while ( requestVerifier.next ( ) ) {
+				    		requestSent = requestVerifier.getInt(1);
+				    	}
+				    	
+			    		//4.1 Is the request already sent?
+			    		if (requestSent != 0) {
+			    			System.out.println("\n\nYou've aleady sent them a friend request!\n");
+			    		}
+			    		else {
+			    			insertSQL = ("insert into friendRequests Values (" + selectedDoge.getDid() +"," + selectionId + ")");
+			    			System.out.println(insertSQL);
+			    			statement.executeUpdate(insertSQL);
+			    			System.out.println("\n\nFriend Request Sent!");
+			    		}
+			    	}
+			    }
 			}
 			
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
 			/* 5. Viewing Friend Requests */
 			else if (userInput.equals("5")) {
-				System.out.println("\nYou have 0 pending requests, because everyone hates you.");
+				
+				System.out.println("\n\nPending Requests:");
+				int friender = 0;
+				boolean pending = false;
+				
+				//Query
+				query = ("select dog1 from friendRequests"
+						+ " where dog2 = " + selectedDoge.getDid());
+				java.sql.ResultSet viewer = statement.executeQuery ( query );
+				
+				//1. Prints Requests
+			    while ( viewer.next ( ) ) {
+			    	friender = viewer.getInt(1);
+			    	if (friender != 0) {
+			    			pending = true;
+			    			System.out.println("Friend request from did " + friender);
+			    	}
+			    }
+			    
+			    //2. No Requests
+			    if (pending == false) {
+			    	System.out.println("You have no new friend requests");
+			    }
+			    
+			    //3. Pending Requests
+			    else {
+			    	System.out.println("Press 1 to accept all requests, or anything else to ignore them");
+			    	int option = userReader.nextInt();
+			    	if (option == 1) {
+			    		System.out.println("Friends Added!");
+			    	}
+			    }
+			    
+			    
 			}
 			
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
