@@ -20,6 +20,14 @@ DROP TABLE ownerProfiles;
 DROP TABLE retailers;
 DROP TABLE services;
 DROP TABLE dogProfiles;
+DROP TABLE friendRequests;
+
+CREATE TABLE friendRequests (
+	dog1 INTEGER NOT NULL,
+	dog2 INTEGER NOT NULL,
+	FOREIGN KEY (dog1) REFERENCES dogProfiles(did),
+	FOREIGN KEY (dog2) REFERENCES dogProfiles(did)
+);
 
 CREATE TABLE dogProfiles (
 	did INTEGER NOT NULL,
