@@ -1,3 +1,4 @@
+
 public class Dog {
 	
 	//Attributes
@@ -32,3 +33,21 @@ public class Dog {
 	String getBirthDate() {
 		return birthDate;
 	}
+	
+	
+	//Printing Attributes
+	void print() {
+		
+		String gend = "Male";
+		if (gender == 1) 
+			gend = "Female";
+		
+		String rStatus = "Single";
+		if (relationshipStatus == 1)
+				rStatus = "Involved";
+		System.out.println("-------------------\n"
+						+ did + "\n" + name + "\n" + gend + "\n" 
+						+ "Relationship Status: " + rStatus + "\n" + birthDate
+						+ "\n-------------------\n" );
+	}
+}
