@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Stack;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.Connection;
@@ -99,9 +100,9 @@ public class Driver {
 			if (userInput.equals("1")) {
 				System.out.println("Press 1 to view dogs,\n2 to view Clubs,\n"
 						+ "3 to view Events,\n4 to view Services,\nAnd 5 to view Retailers");
-				System.out.println("Please Note:\nFor the sake of thsi demo, we are allowing" +
-						" alot more transparency in information. Normally you couldn't just find" +
-						" info on dogs you're not friends with, clubs you're not a part of, ect.");
+				System.out.println("\nPlease Note:\nFor the sake of thsi demo, we are allowing\n" +
+						"alot more transparency in information. Normally you couldn't just find\n" +
+						"info on dogs you're not friends with, clubs you're not a part of, ect.");
 				int listChoice = userReader.nextInt();
 				
 				//1. View all dogs
@@ -332,7 +333,7 @@ public class Driver {
 			    while ( realFinder.next ( ) ) {
 			    	real = realFinder.getInt(1);
 			    }
-			    if (real == 0) {
+			    if (real == 0 || (selectionId == selectedDoge.getDid()) ) {
 			    	System.out.println("\n\nINVALID PROFILE, choose a real Id");
 			    }
 			    
@@ -380,6 +381,9 @@ public class Driver {
 			/* 5. Viewing Friend Requests */
 			else if (userInput.equals("5")) {
 				
+				//Declare Arraylist of Requests
+				Stack<Integer> requests = new Stack<Integer>();
+				
 				System.out.println("\n\nPending Requests:");
 				int friender = 0;
 				boolean pending = false;
@@ -393,6 +397,7 @@ public class Driver {
 			    while ( viewer.next ( ) ) {
 			    	friender = viewer.getInt(1);
 			    	if (friender != 0) {
+			    			requests.push(friender);
 			    			pending = true;
 			    			System.out.println("Friend request from did " + friender);
 			    	}
@@ -405,11 +410,34 @@ public class Driver {
 			    
 			    //3. Pending Requests
 			    else {
-			    	System.out.println("Press 1 to accept all requests, or anything else to ignore them");
-			    	int option = userReader.nextInt();
-			    	if (option == 1) {
-			    		System.out.println("Friends Added!");
+			    	System.out.println("\nPress 1 to accept a request, or anything else to ignore them\n");
+			    	
+			    	/* Pops Friend Requests from stack, and 
+			    	 modifies actual data along the way */
+			    	while (!(requests.empty())) {
+			    		
+			    		int sender = requests.pop();
+			    		
+			    		System.out.println("Accept request from (did) " + sender + "?");
+			    		int option = userReader.nextInt();
+			    		
+			    		if (option == 1) {
+			    			System.out.println("Friend Added!");
+			    			
+			    			//Two way friendship
+			    			insertSQL = ("Insert into dogfriends Values (" + selectedDoge.getDid() + "," + sender + ")");
+			    			statement.executeUpdate(insertSQL);
+			    			insertSQL = ("Insert into dogfriends Values (" + sender + "," + selectedDoge.getDid() + ")");
+			    			statement.executeUpdate(insertSQL);
+			    		}
+			    		else {
+			    			System.out.println("Ew, no thanks");
+			    		}
 			    	}
+			    	
+			    	//Deletes friend Requests
+		    		insertSQL = ("delete from friendRequests where dog2 = " + selectedDoge.getDid());
+		    		statement.executeUpdate(insertSQL);
 			    }
 			    
 			    
@@ -419,7 +447,21 @@ public class Driver {
 
 			/* 6. Viewing Club/Event Participation */
 			else if (userInput.equals("6")) {
-				System.out.println("\nYou are part of 0 clubs, you outcast");
+				System.out.println("\n-----------------------------------------------\nClubs:");
+				query = ("select clubid from membersofclubs where dogid = " + selectedDoge.getDid() );
+				java.sql.ResultSet rs = statement.executeQuery ( query ) ;
+				while ( rs.next ( ) ) {
+					int cid = rs.getInt (1) ;
+					System.out.println("(cid: " + cid + ")");
+					}
+				System.out.println("-----------------------------------------------\nEvents:");
+				query = ("select eventid from goingtoevent where dogid = " + selectedDoge.getDid() );
+				java.sql.ResultSet rs2 = statement.executeQuery ( query ) ;
+				while ( rs2.next ( ) ) {
+					int eid = rs2.getInt (1) ;
+					System.out.println("(eid: " + eid + ")");
+					}
+				System.out.println("-----------------------------------------------");
 			}
 			
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
