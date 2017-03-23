@@ -447,26 +447,35 @@ public class Driver {
 
 			/* 6. Viewing Club/Event Participation */
 			else if (userInput.equals("6")) {
+				//Clubs
 				System.out.println("\n-----------------------------------------------\nClubs:");
-				query = ("select clubid from membersofclubs where dogid = " + selectedDoge.getDid() );
+				query = ("select cid, name "
+						+ "from membersofclubs, dogclubs "
+						+ "where clubid = cid and dogid = " + selectedDoge.getDid() );
 				java.sql.ResultSet rs = statement.executeQuery ( query ) ;
 				while ( rs.next ( ) ) {
 					int cid = rs.getInt (1) ;
-					System.out.println("(cid: " + cid + ")");
+					String name = rs.getString(2);
+					System.out.println("(cid: " + cid + "), " + name);
 					}
+				
+				//Events
 				System.out.println("-----------------------------------------------\nEvents:");
-				query = ("select eventid from goingtoevent where dogid = " + selectedDoge.getDid() );
+				query = ("select eid, name "
+						+ "from goingtoevent, dogevents "
+						+ "where eid = eventid and dogid = " + selectedDoge.getDid() );
 				java.sql.ResultSet rs2 = statement.executeQuery ( query ) ;
 				while ( rs2.next ( ) ) {
 					int eid = rs2.getInt (1) ;
-					System.out.println("(eid: " + eid + ")");
+					String name = rs2.getString(2);
+					System.out.println("(eid: " + eid + "), " + name);
 					}
 				System.out.println("-----------------------------------------------");
 			}
 			
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
-			/* Quit, and wrong input handles */
+			/* Quitting and wrong input handles */
 			
 			//Quit
 			else if (userInput.equals("animals")) {
